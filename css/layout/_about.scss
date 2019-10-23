@@ -1,0 +1,18 @@
+//-------------------------------------
+   // :: About Section
+//-------------------------------------
+.about{
+    padding: 9.375rem 0em;
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+  h2{
+    @include Subheading();
+    text-align: center;
+  }  
+  
+  p{
+    @include p();
+  }  
+}

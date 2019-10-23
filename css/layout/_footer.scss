@@ -1,0 +1,99 @@
+//-------------------------------------
+  // :: Footer Section
+//-------------------------------------
+@import "../vendors/rfs";
+
+.footer{
+  max-width: 100%;
+  padding: 1.625rem 0em;
+  border-top: 1px solid $accent;
+
+  h5{
+    @include font-size(1rem);
+    font-weight: 600;
+    color: $accent;
+    text-transform: uppercase;
+    margin-bottom: 0.875rem;
+  }
+
+  @include element('logo'){
+    display: block;
+    svg{
+      height: auto;
+      @include responsive-font-size(8);    
+      width: 10em;
+    }
+  }
+
+  li{
+    margin-bottom: 0.3125rem;
+  }
+
+  a{
+    @include font-size(0.875rem);
+    font-weight: 400;
+    color: $f-color;
+    text-transform: capitalize;
+  }
+
+  p{
+    @include p();
+  }
+
+  @include element('social'){
+    margin-top: 1.375rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  @include element('icon'){
+    @include social-icn();
+  }
+  
+  @include element('copywrite'){
+    @include font-size(1rem);
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 0rem;
+    margin-top: 6.25rem;
+    text-align: center;
+  }
+  @include element('content'){
+    padding-top: 4.625rem;
+  }
+}
+
+//-------------------------------------
+   // :: Footer Mobile 
+//-------------------------------------
+@media only screen and (min-width: 320px) and (max-width: 767px) and (orientation: Portrait){
+  .footer{
+    @include element('help'){
+      @include margin('m-50-b');
+      @include margin('m-50-t');
+    }
+    @include element('about'){
+      @include margin('m-50-b');
+    }
+    @include element('social'){
+      max-width: 100%;
+      text-align: left;
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape){
+  .footer{
+    @include element('help'){
+      @include margin('m-50-b');
+      @include margin('m-50-t');
+    }
+    @include element('about'){
+      @include margin('m-50-b');
+    }
+    @include element('social'){
+      max-width: 100%;
+      text-align: left;
+    }
+  }
+}

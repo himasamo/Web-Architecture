@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Scss-Kit</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon Image-->
+  	<link rel="shortcut icon" href="#" type="image/x-icon">
+    <!--- Css File --->
+    <link rel="stylesheet" href="css/style.css">
+    <!--- Font Awesome File -->
+    <link rel="stylesheet" href="font/fontawesome/css/all.min.css">
+    <!--- Animation Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+    <!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+  	<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader__loader"></div>
+  </div>
+  <!-- /Preloader -->
+
+  <!-- Start Header Section -->
+    <div class="navbar">
+      <div class="container navbar-lg">
+        <div class="navbar__logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="56" height="25" viewBox="0 0 56 25"><g transform="translate(-160 -40)"><rect width="23" height="13" transform="translate(160 40)" fill="#ccb9a6"/><text transform="translate(160 60)" fill="#f6f5f0" font-size="20" font-family="SourceSansPro-Bold, Source Sans Pro" font-weight="700" letter-spacing="0em"><tspan x="0" y="0">Shade</tspan></text></g></svg>        
+        </div>
+        <div class="svgicon navbar__open">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12"><g transform="translate(-3 -6)"><rect width="18" height="2" rx="1" transform="translate(3 6)" fill="#f6f5f0"/><rect width="11" height="2" rx="1" transform="translate(10 11)" fill="#f6f5f0"/><rect width="15" height="2" rx="1" transform="translate(6 16)" fill="#f6f5f0"/></g></svg>
+        </div>
+        <nav class="navbar__nav">
+          <div class="svgicon navbar__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13.314" height="13.314" viewBox="0 0 13.314 13.314"><path d="M12.02,13.435,7.071,8.486l-4.95,4.95A1,1,0,1,1,.707,12.021l4.95-4.95L.707,2.121A1,1,0,0,1,2.121.707l4.95,4.95L12.02.707a1,1,0,1,1,1.415,1.415L8.486,7.071l4.949,4.949a1,1,0,0,1-1.415,1.415Z" transform="translate(-0.414 -0.414)" fill="#f6f5f0"/></svg>
+          </div>
+          <ul class="navbar__list">
+            <li class="navbar__item navbar__item--one is-active"><a class="navbar__link" href="#about" id="show">about</a></li>
+            <li class="navbar__item navbar__item--two"><a class="navbar__link" href="#services">services</a></li>
+            <li class="navbar__item navbar__item--three"><a class="navbar__link" href="#work">work</a></li>
+            <li class="navbar__item navbar__item--four"><a class="navbar__link" href="#team">team</a></li>
+            <li class="navbar__item navbar__item--five navbar__item--last"><a class="navbar__link" href="#client">client</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <header class="header">
+      <div class="showslider">
+        <div class="header__bg header__overlay" style="background-image: url(image/bgs/webp/bg.webp);">
+          <div class="container">
+            <div class="header__title">
+              <div class="header__flex">
+                <h2 class="header__heading">make your personality reflecting your elegant taste.</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bg header__overlay" style="background-image: url(image/bgs/webp/bg-1.webp);">
+          <div class="container">
+            <div class="header__title">
+              <div class="header__flex">
+                <h2 class="header__heading">inspire creativity and listen to new ideas</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bg header__overlay" style="background-image: url(image/bgs/webp/bg-3.webp);">
+          <div class="container">
+            <div class="header__title">
+              <div class="header__flex">
+                <h2 class="header__heading">choose luxurious life is the best choice.</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ctrl">
+        <div class="container">
+          <div class="ctrl__flex"> 
+            <div class="ctrl__slide">
+              <ul class="ctrl__nav">
+                <li class="next ctrl__up">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13.776" height="7.441" viewBox="0 0 13.776 7.441"><path d="M18.5,15.67a.552.552,0,0,1-.391-.162L11.769,9.173a.555.555,0,0,1,0-.784L18.1,2.057a.554.554,0,0,1,.784.784L12.945,8.782l5.943,5.943a.554.554,0,0,1-.392.945Z" transform="translate(15.67 -11.607) rotate(90)"/></svg>
+                </li>
+                <li class="ctrl__numdot">
+                  <ul id="ctrl__dots" class="ctrl__block">
+                    <li class="ctrl__number ctrl__number--first is-active" data-slide="1">01</li>
+                    <li class="ctrl__number" data-slide="2">02</li>
+                    <li class="ctrl__number ctrl__number--last" data-slide="3">03</li>
+                  </ul>
+                </li>
+                <li class="prev ctrl__down">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13.776" height="7.441" viewBox="0 0 13.776 7.441"><path d="M18.5,15.67a.552.552,0,0,1-.391-.162L11.769,9.173a.555.555,0,0,1,0-.784L18.1,2.057a.554.554,0,0,1,.784.784L12.945,8.782l5.943,5.943a.554.554,0,0,1-.392.945Z" transform="translate(-1.894 19.049) rotate(-90)"/></svg>
+                </li>
+              </ul> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  <!-- End Header Section -->
+
+  <!-- Start About Sextion -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2>something about us</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <P>We are a design and architecture studio born in Shoreditch, London and now working across the UK and beyond. From design to delivery, we create spaces, build brands and shape environments. We’re not here to dictate, but to listen, be responsive, and provide the appropriate solution to every project.
+            </P>
+          </div>
+          <div class="col-md-6 mb-4">
+            <p>We put the right people on the right job, simple as that. Our staff are central to our success, so we take the time to nurture talent, inspire creativity and listen to new ideas. What’s more, the people you meet on day one are the faces that will be there when we deliver the project. The results speak for themselves.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- Start About Sextion -->
+
+  <!-- Start Service Sextion -->
+    <section class="service" id="services">
+      <div class="container">
+        <h2>our services</h2>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 animate" data-delay="0s">
+            <div class="service__unit service__unit--zero">
+              <h5>architecture</h5>
+              <div class="service__thumb">
+                <div class="service__thumbnail image">
+                  <img srcset="image/bgs/576/service/s-sm-1.png 567w,
+                              image/bgs/768/service/s-md-1.png 768w,
+                              image/bgs/992/service/s-lg-1.png 992w,
+                              image/bgs/1920/service/s-xl-1.png 1920w,"
+                      sizes="(min-width: 576px) 576px,
+                            (min-width: 768px) 768px,  
+                            (min-width: 992px) 992px,  
+                            (min-width: 1200px) 1920px" 
+                      src="image/bgs/1920/service/s-xl-1.png"/>
+                
+                </diV>
+                <div class="service__overlay overlay"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 animate" data-delay="0.3s">
+            <div class="service__unit service__unit--first">
+              <h5>product design</h5>
+              <div class="service__thumb">
+                <div class="service__thumbnail image">
+                  <img srcset="image/bgs/576/service/s-sm-2.png 567w,
+                              image/bgs/768/service/s-md-2.png 768w,
+                              image/bgs/992/service/s-lg-2.png 992w,
+                              image/bgs/1920/service/s-xl-2.png 1920w,"
+                      sizes="(min-width: 576px) 576px,
+                            (min-width: 768px) 768px,  
+                            (min-width: 992px) 992px,  
+                            (min-width: 1200px) 1920px" 
+                      src="image/bgs/1920/service/s-xl-2.png"/>
+                
+                </diV>
+                <div class="service__overlay overlay"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 animate" data-delay="0.5s">
+            <div class="service__unit service__unit--last">
+              <h5>interior design</h5>
+              <div class="service__thumb">
+                <div class="service__thumbnail image">
+                  <img srcset="image/bgs/576/service/s-sm-3.png 567w,
+                              image/bgs/768/service/s-md-3.png 768w,
+                              image/bgs/992/service/s-lg-3.png 992w,
+                              image/bgs/1920/service/s-xl-3.png 1920w,"
+                      sizes="(min-width: 576px) 576px,
+                            (min-width: 768px) 768px,  
+                            (min-width: 992px) 992px,  
+                            (min-width: 1200px) 1920px" 
+                      src="image/bgs/1920/service/s-xl-3.png"/>
+                
+                </diV>
+                <div class="service__overlay overlay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- Start Service Sextion -->
+
+  <!-- Start Project Sextion -->
+    <section class="project" id="work">
+      <div class="container">
+        <h2>our project</h2>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 md-4 md-lg-0 motions" data-delays="0s">
+            <a href="#" target="_blank" class="project__unit">
+              <div class="project__thumbnail">
+                <img srcset="image/bgs/576/project/p-sm-1.png 567w,
+                            image/bgs/768/project/p-md-1.png 768w,
+                            image/bgs/992/project/p-lg-1.png 992w,
+                            image/bgs/1920/project/p-xl-1.png 1920w,"
+                    sizes="(min-width: 576px) 576px,
+                          (min-width: 768px) 768px,  
+                          (min-width: 992px) 992px,  
+                          (min-width: 1200px) 1920px" 
+                    src="image/bgs/1920/project/p-xl-1.png"/>
+              </div>
+              <div class="project__overlay overlay">
+                <div class="project__details">
+                  <h5 class="project__title name">architecture</h5>
+                  <p class="project__topic desc">home <span class="dash"></span>2019</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 md-4 md-lg-0 motions" data-delays="0.3s">
+            <a href="#" target="_blank" class="project__unit">
+              <div class="project__thumbnail">
+                <img srcset="image/bgs/576/project/p-sm-2.png 567w,
+                            image/bgs/768/project/p-md-2.png 768w,
+                            image/bgs/992/project/p-lg-2.png 992w,
+                            image/bgs/1920/project/p-xl-2.png 1920w,"
+                    sizes="(min-width: 576px) 576px,
+                          (min-width: 768px) 768px,  
+                          (min-width: 992px) 992px,  
+                          (min-width: 1200px) 1920px" 
+                    src="image/bgs/1920/project/p-xl-2.png"/>
+              </div>
+              <div class="project__overlay overlay">
+                <div class="project__details">
+                  <h5 class="project__title name">interior design</h5>
+                  <p class="project__topic desc">nike<span class="dash"></span>2019</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 md-4 md-lg-0 motions" data-delays="0.5s">
+            <a href="#" target="_blank" class="project__unit project__unit--last">
+              <div class="project__thumbnail">
+                <img srcset="image/bgs/576/project/p-sm-3.png 567w,
+                            image/bgs/768/project/p-md-3.png 768w,
+                            image/bgs/992/project/p-lg-3.png 992w,
+                            image/bgs/1920/project/p-xl-3.png 1920w,"
+                    sizes="(min-width: 576px) 576px,
+                          (min-width: 768px) 768px,  
+                          (min-width: 992px) 992px,  
+                          (min-width: 1200px) 1920px" 
+                    src="image/bgs/1920/project/p-xl-3.png"/>
+              </div>
+              <div class="project__overlay overlay">
+                <div class="project__details">
+                  <h5 class="project__title name">interior design</h5>
+                  <p class="project__topic desc">caffee shop<span class="dash"></span>2019</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="btn-cta">
+            <a href="#/" class="cta">show more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- Start Project Sextion -->
+
+  <!-- Start Team Sextion -->
+    <section class="team" id="team">
+      <div class="container">
+        <h2>our team</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-3 col-xl-3 motions" data-delays="0s">          
+            <div class="team__unit">
+              <div class="team__image">
+                <img srcset="image/bgs/576/team/u-sm-1.png 567w,
+                            image/bgs/768/team/u-md-1.png 768w,
+                            image/bgs/992/team/u-lg-1.png 992w,
+                            image/bgs/1920/team/u-xl-1.png 1920w,"
+                    sizes="(min-width: 576px) 576px,
+                          (min-width: 768px) 768px,  
+                          (min-width: 992px) 992px,  
+                          (min-width: 1200px) 1920px" 
+                    src="image/bgs/1920/team/u-xl-1.png"/>
+              </div>
+              <strong class="team__name">olivia noah</strong>
+              <p class="team__job">interior Designer</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 col-xl-3 motions" data-delays="0.3s">          
+            <div class="team__unit">
+              <div class="team__image">
+                <img srcset="image/bgs/576/team/u-sm-2.png 567w,
+                            image/bgs/768/team/u-md-2.png 768w,
+                            image/bgs/992/team/u-lg-2.png 992w,
+                            image/bgs/1920/team/u-xl-2.png 1920w,"
+                    sizes="(min-width: 576px) 576px,
+                          (min-width: 768px) 768px,  
+                          (min-width: 992px) 992px,  
+                          (min-width: 1200px) 1920px" 
+                    src="image/bgs/1920/team/u-xl-2.png"/>
+              </div>
+              <strong class="team__name">cress miler</strong>
+              <p class="team__job">architecture Designer</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 col-xl-3 motions" data-delays="0.5s">          
+            <div class="team__unit team__unit--first">
+              <div class="team__image">
+                <img srcset="image/bgs/576/team/u-sm-3.png 567w,
+                            image/bgs/768/team/u-md-3.png 768w,
+                            image/bgs/992/team/u-lg-3.png 992w,
+                            image/bgs/1920/team/u-xl-3.png 1920w,"
+                    sizes="(min-width: 576px) 576px,
+                          (min-width: 768px) 768px,  
+                          (min-width: 992px) 992px,  
+                          (min-width: 1200px) 1920px" 
+                    src="image/bgs/1920/team/u-xl-3.png"/>
+              </div>
+              <strong class="team__name">grant marshall</strong>
+              <p class="team__job">interior Designer</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 col-xl-3 motions" data-delays="0.7s">          
+            <div class="team__unit team__unit--last">
+              <div class="team__image">
+                <img srcset="image/bgs/576/team/u-sm-4.png 567w,
+                            image/bgs/768/team/u-md-4.png 768w,
+                            image/bgs/992/team/u-lg-4.png 992w,
+                            image/bgs/1920/team/u-xl-4.png 1920w,"
+                    sizes="(min-width: 576px) 576px,
+                          (min-width: 768px) 768px,  
+                          (min-width: 992px) 992px,  
+                          (min-width: 1200px) 1920px" 
+                    src="image/bgs/1920/team/u-xl-4.png"/>
+              </div>
+              <strong class="team__name">julia petersen</strong>
+              <p class="team__job">product Designer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- Start Team Sextion -->
+    
+  <!-- Start Client Sextion -->
+    <section class="client" id="client">
+      <div class="container">
+        <h2>brand we have worked with</h2>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="client__slide clientslider">
+                <div class="client__thumb">
+                    <div class="client__logo">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><path d="M172.2 175.7l-17.3-48.1c-.2-.7-.5-1.5-.5-2.3 0-2.1 1.8-4.1 4.3-4.1 2.2 0 3.6 1.4 4.3 3.5l14.3 41.5 14.4-41.6c.7-2 2-3.4 4.2-3.4h.4c2.3 0 3.7 1.4 4.4 3.4l14.3 41.6 14.5-41.7c.5-1.8 1.8-3.3 4.1-3.3 2.4 0 4.2 1.9 4.2 4 0 .8-.3 1.6-.5 2.3l-17.4 48.2c-.9 2.5-2.6 3.8-4.6 3.8h-.3c-2.2 0-3.9-1.3-4.6-3.8l-14.2-40.9-14.3 40.9c-.8 2.5-2.4 3.8-4.6 3.8h-.2c-2.3 0-4-1.3-4.9-3.8m126-50.4c0-2.3 1.9-4.3 4.2-4.3 2.4 0 4.3 1.9 4.3 4.3v9.8c4.2-9.5 13.5-14 19.6-14 2.5 0 4.2 1.9 4.2 4.3 0 2.3-1.5 4-3.8 4.3-11 1.3-20.1 9.6-20.1 26V175c0 2.3-1.8 4.3-4.2 4.3-2.4 0-4.3-1.9-4.3-4.3l.1-49.7zm59.5 54.7c-15.4 0-27.9-11.9-27.9-29.4v-.2c0-16.3 11.4-29.4 26.8-29.4 16.5 0 25.9 13.6 25.9 28.6 0 2.3-1.9 3.9-3.9 3.9h-40.4c1.2 12.2 9.7 19.1 19.7 19.1 6.9 0 12-2.7 16.1-6.6.6-.5 1.4-1 2.4-1 2 0 3.7 1.6 3.7 3.6 0 1-.4 2-1.3 2.7-5.3 5.3-11.6 8.7-21.1 8.7m16.6-32.7c-.9-10.3-6.7-19.2-17.8-19.2-9.7 0-17.1 8.2-18.1 19.2h35.9zm-136.3 15v-.2c0-12 9.9-18.4 24.3-18.4 7.3 0 12.4 1 17.5 2.4v-2c0-10.2-6.3-15.5-16.9-15.5-5.7 0-9 .7-13.2 2.6-.5.2-1.1.3-1.5.3-2 0-3.7-1.7-3.7-3.6 0-1.8.8-2.8 2.3-3.5 5.6-2.4 9.8-3.2 17.1-3.2 8 0 14.2 2.1 18.4 6.3 3.9 3.8 5.8 9.3 5.8 16.6v31.4c0 2.4-1.8 4.2-4.1 4.2-2.4 0-4-1.8-4-4v-5.4c-4 5.2-10.6 9.8-20.6 9.8-10.7-.1-21.4-6.2-21.4-17.8m41.9-4.4v-5.5c-4.2-1.2-9.8-2.4-16.7-2.4-10.7 0-16.6 4.6-16.6 11.8v.2c0 7.1 6.6 11.3 14.3 11.3 10.4 0 19-6.4 19-15.4M18.2 124.7c-1.9-4.1-6.5-5.9-10.8-4-4.3 1.9-5.9 6.7-3.9 10.8l18 39.2c2.8 6.1 5.8 9.4 11.4 9.4 6 0 8.6-3.5 11.4-9.4 0 0 15.7-34.3 15.9-34.6.2-.4.7-1.5 2.3-1.5 1.4 0 2.5 1.1 2.5 2.5v33.5c0 5.2 2.9 9.4 8.4 9.4s8.5-4.2 8.5-9.4v-27.4c0-5.3 3.8-8.7 9-8.7s8.6 3.6 8.6 8.7v27.4c0 5.2 2.9 9.4 8.4 9.4s8.5-4.2 8.5-9.4v-27.4c0-5.3 3.8-8.7 8.9-8.7 5.2 0 8.6 3.6 8.6 8.7v27.4c0 5.2 2.9 9.4 8.4 9.4s8.5-4.2 8.5-9.4v-31.2c0-11.5-9.2-19.5-20.3-19.5-11.1 0-18 7.7-18 7.7-3.7-4.8-8.8-7.7-17.4-7.7-9.1 0-17 7.7-17 7.7-3.7-4.8-10-7.7-15.2-7.7-8.1 0-14.4 3.5-18.3 12.5L33 159.6l-14.8-34.9zm365.1 3.4c0-3.9 3.1-7.1 7-7.1 4 0 7 3.2 7 7 0 3.9-3.1 7.1-7 7.1-4 .1-7-3.1-7-7m12.7 0c0-3.2-2.4-5.8-5.7-5.8-3.2 0-5.7 2.6-5.7 5.8 0 3.1 2.4 5.7 5.7 5.7 3.2 0 5.7-2.6 5.7-5.7m-8.4-2.8c0-.4.3-.8.8-.8h2.3c.9 0 1.6.2 2 .7.4.4.6.9.6 1.6 0 1.1-.5 1.7-1.4 2.1l1 1.3c.1.2.2.3.2.6 0 .4-.4.7-.7.7-.3 0-.6-.2-.7-.4l-1.5-1.8H389v1.5c0 .4-.3.7-.7.7-.4 0-.8-.3-.8-.7l.1-5.5zm3 2.5c.7 0 1.1-.4 1.1-1s-.4-1-1.2-1H389v2h1.6z"/></svg>
+                    </div>
+                  </div>
+                  <div class="client__thumb">
+                    <div class="client__logo">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><path d="M95.5 190.7H73.7L67 174.6H30.6l-6.1 16.1H3l32.8-81.4h23.5l36.2 81.4zm-47.6-61.9L36 160.4h25l-13.1-31.6zm127-19.5h17.7v81.4h-20.3v-50.9l-22 25.5h-3.1l-22-25.5v50.9h-20.3v-81.4h17.7l26.1 30.2 26.2-30.2zm69.1 0c29.7 0 45 18.5 45 40.8 0 23.4-14.8 40.6-47.3 40.6H208v-81.4h36zm-15.6 66.5h13.3c20.4 0 26.5-13.9 26.5-25.8 0-14-7.5-25.8-26.7-25.8h-13l-.1 51.6zm101-47.2L303.8 103H397v93.2l-25.6-25.6v-42h-42zm0 5.1L303 160.1V197h36.9l26.4-26.4h-36.9v-36.9z"/></svg>
+                    </div>
+                  </div>
+                  <div class="client__thumb">
+                    <div class="client__logo">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="154.331 83.746 400 300"><path d="M403.032 162.591c8.577-4.212 12.826-3.66 12.923.61.113 5.546-.706 12.921-1.297 18.257-3.184 29.005-8.501 52.707-8.9 82.487 14.007-36.264 25.747-61.469 40.88-92.511 4.803-9.891 7.87-8.042 11.816-9.796 15.361-6.841 15.934-2.649 13.932 5.718-7.452 30.989-26.529 128.56-29.445 143.584-.839 4.346-5.564 2.503-6.784.804-5.471-7.566-11.646-7.685-10.96-12.716 3.432-25.049 15.78-87.896 19.002-102.704-16.409 33.642-33.43 75.697-42.177 99.544-1.849 5.063-5.222 4.692-7.319.987-2.953-5.204-8.689-7.861-9.642-14.012-2.993-19.553 3.43-56.824 4.324-80.403-8.937 25.757-23.937 75.765-30.511 98.358-2.708 9.349-11.741 7.824-9.34-1.289 9.987-37.915 31.503-104.978 40.805-129.086 2.193-5.679 7.929-5.488 12.693-7.832M348.563 157.941c-2.896-.706-11.302 3.831-16.467 4.727-1.639.286-3.201 2.02-3.754 3.259a1481.957 1481.957 0 0 0-22.108 53.615 564.342 564.342 0 0 0-28.568 5.664c7.699-19.75 15.475-39.23 23.06-57.964 3.735-9.225-6.099-10.101-9.91-.763-4.956 12.141-14.237 34.887-24.51 61.398a608.559 608.559 0 0 0-23.918 6.383c-6.079 1.756-6.327 3.375-3.697 7.021 1.448 2.03 4.441 1.825 5.813 3.271 3.545 3.75 5.698 8.234 12.044 8.912-5.66 15.143-11.32 30.757-16.448 45.791-3.221 9.438 5.947 11.369 9.473 1.383 5.679-16.1 11.664-32.393 17.819-48.638 5.127-1.192 17.533-3.864 28.987-6.349-9.091 24.918-15.076 43.841-17.343 53.052-.419 1.772.286 2.755.667 3.478 3.068 4.466 5.984 4.647 9.929 10.17 1.068 1.505 4.65 2.318 5.87-1.39 8.424-25.445 17.096-49.319 25.176-70.722 3.354-.735 9.396-2.192 13.093-7.71 6.575-9.793 8.462-7.807 10.045-10.784 1.982-3.737.666-7.246-6.347-6.378 0 0-2.65.188-7.548.747 7.776-20.021 14.58-37.003 19.478-49.943 1.681-4.381 1.889-7.583-.836-8.23"/><path d="M337.09 287.793c1.811 4.575 7.472 3.189 5.317-2.333-2.191-5.626-7.642-22.563-9.071-28.021-1.944-7.352 6.48-5.341 2.211-.534-3.659 4.134-6.099 5.79-12.864 13.648-6.538 7.588-4.765 17.434 2.229 19.609 7.89 2.453 14.846-6.24 19.153-12.62 4.173-6.176.134-9.799-4.078-6.148-2.707 2.349-5.832 5.954-8.996 7.898-2.573 1.565-4.594-.115-1.163-4.839 3.983-5.468 8.443-10.049 11.758-15.217 6.767-10.53-6.613-16.599-12.368-9.76-3.087 3.646-2.306 7.226-1.468 10.298 1.354 4.922 6.385 20.63 9.34 28.019"/></svg>
+                    </div>
+                  </div>
+                  <div class="client__thumb">
+                    <div class="client__logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><path d="M210.6 119.6c0 4.4-3.6 8-8 8s-8-3.6-8-8 3.4-8 8-8c4.6.1 8 3.7 8 8zm-32.8 16v2s-3.8-4.9-11.9-4.9c-13.3 0-23.8 10.2-23.8 24.2s10.3 24.2 23.8 24.2c8.2 0 11.9-5 11.9-5v2.1c0 1 .7 1.7 1.7 1.7h9.9v-46h-9.9c-1 0-1.7.9-1.7 1.7zm0 29.5c-1.8 2.7-5.5 5-9.9 5-7.8 0-13.8-4.9-13.8-13.2 0-8.3 6-13.2 13.8-13.2 4.3 0 8.2 2.4 9.9 5v16.4zm19-31.2h11.8v46h-11.8v-46zm175.5-1.2c-8.1 0-11.9 4.9-11.9 4.9v-25.8h-11.8V180h9.9c1 0 1.7-.9 1.7-1.7v-2.1s3.8 5 11.9 5c13.3 0 23.8-10.3 23.8-24.2.1-14-10.4-24.3-23.6-24.3zm-1.9 37.3c-4.5 0-8.1-2.3-9.9-5v-16.4c1.8-2.4 5.8-5 9.9-5 7.8 0 13.8 4.9 13.8 13.2 0 8.3-6 13.2-13.8 13.2zm-27.8-17.4V180h-11.8v-26c0-7.6-2.4-10.7-9.1-10.7-3.6 0-7.2 1.8-9.5 4.5v32.1h-11.8v-46h9.3c1 0 1.7.9 1.7 1.7v2c3.4-3.6 8-4.9 12.5-4.9 5.1 0 9.4 1.5 12.9 4.4 4.2 3.4 5.8 7.8 5.8 15.5zm-70.7-19.9c-8.1 0-11.9 4.9-11.9 4.9v-25.8h-11.8V180h9.9c1 0 1.7-.9 1.7-1.7v-2.1s3.8 5 11.9 5c13.3 0 23.8-10.3 23.8-24.2.2-14-10.2-24.3-23.6-24.3zM270 170c-4.5 0-8.1-2.3-9.9-5v-16.4c1.8-2.4 5.8-5 9.9-5 7.8 0 13.8 4.9 13.8 13.2 0 8.3-6 13.2-13.8 13.2zm-31.9-37.3c3.6 0 5.4.6 5.4.6v10.9s-9.8-3.3-15.9 3.7v32.2h-11.8v-46.2h9.9c1 0 1.7.9 1.7 1.7v2c2.3-2.6 7.1-4.9 10.7-4.9zm-122 43.1c-.6-1.5-1.2-3.1-1.8-4.4-1-2.2-2-4.3-2.8-6.2l-.1-.1c-8.4-18.4-17.5-37-27.1-55.3l-.4-.7c-1-1.8-2-3.8-2.9-5.8-1.2-2.2-2.4-4.5-4.4-6.7-3.9-4.9-9.5-7.6-15.5-7.6-6.1 0-11.6 2.7-15.7 7.3-1.8 2.2-3.2 4.5-4.4 6.7-1 2-2 3.9-2.9 5.8l-.4.7c-9.4 18.4-18.6 37-27.1 55.3l-.1.2c-.9 2-1.8 4-2.8 6.2-.6 1.3-1.2 2.8-1.8 4.4-1.6 4.5-2.1 8.8-1.5 13.2 1.3 9.2 7.5 16.9 15.9 20.3 3.2 1.3 6.5 2 9.9 2 1 0 2.2-.1 3.2-.2 4-.5 8.2-1.8 12.2-4.2 5-2.8 9.8-6.9 15.2-12.7 5.4 5.9 10.3 9.9 15.2 12.7 4 2.3 8.2 3.7 12.2 4.2 1 .1 2.2.2 3.2.2 3.4 0 6.9-.6 9.9-2 8.6-3.4 14.6-11.3 15.9-20.3 1-4.2.5-8.5-1.1-13zm-55.2 6.3c-6.6-8.3-10.9-16.2-12.4-22.8-.6-2.8-.7-5.3-.4-7.5.2-2 1-3.7 2-5.1 2.3-3.3 6.2-5.4 10.8-5.4s8.6 2 10.8 5.4c1 1.5 1.7 3.2 2 5.1.4 2.2.2 4.8-.4 7.5-1.5 6.6-5.8 14.4-12.4 22.8zm48.8 5.8c-.9 6.4-5.1 11.9-11.1 14.3-2.9 1.2-6.1 1.6-9.3 1.2-3.1-.4-6.1-1.3-9.3-3.2-4.4-2.4-8.8-6.2-14-11.9 8.1-9.9 13-19 14.8-27.1.9-3.8 1-7.2.6-10.4-.5-3.1-1.6-5.9-3.3-8.3-3.8-5.5-10.2-8.7-17.3-8.7s-13.5 3.3-17.3 8.7c-1.7 2.4-2.8 5.3-3.3 8.3-.5 3.2-.4 6.7.6 10.4 1.8 8.1 6.9 17.3 14.8 27.2-5 5.6-9.5 9.4-14 11.9-3.2 1.8-6.2 2.8-9.3 3.2-3.3.4-6.5-.1-9.3-1.2-6-2.4-10.3-8-11.1-14.3-.4-3.1-.1-6.1 1.1-9.5.4-1.2 1-2.4 1.6-3.9.9-2 1.8-4 2.8-6.1l.1-.2c8.4-18.2 17.5-36.9 26.9-55l.4-.7c1-1.8 2-3.8 2.9-5.6 1-2 2.1-3.8 3.4-5.4 2.6-2.9 6-4.5 9.8-4.5s7.2 1.6 9.8 4.5c1.3 1.6 2.4 3.4 3.4 5.4 1 1.8 2 3.8 2.9 5.6l.4.7c9.3 18.2 18.4 36.9 26.8 55.1v.1c1 2 1.8 4.2 2.8 6.1.6 1.5 1.2 2.7 1.6 3.9 1.2 3.1 1.6 6.2 1.1 9.4z"/></svg>
+                    </div>
+                  </div>
+                  <div class="client__thumb">
+                    <div class="client__logo">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="-100 -114 400 300"><path d="M-5.801 84.342c-8.089-.32-14.709-2.535-19.884-6.646-.987-.785-3.341-3.14-4.13-4.134-2.099-2.638-3.525-5.207-4.478-8.056-2.929-8.771-1.42-20.281 4.31-32.914 4.908-10.814 12.481-21.539 25.694-36.394 1.945-2.186 7.742-8.579 7.778-8.579.015 0-.3.548-.698 1.215C-.645-5.413-3.584 1.366-5.186 7.232c-2.572 9.417-2.262 17.495.909 23.761 2.187 4.316 5.937 8.055 10.153 10.122 7.382 3.617 18.189 3.916 31.388.875.909-.21 45.936-12.163 100.062-26.563 54.124-14.4 98.417-26.174 98.424-26.163.015.012-125.749 53.829-191.035 81.747-10.34 4.42-13.105 5.536-17.964 7.243-12.426 4.363-23.556 6.445-32.552 6.088z"/></svg>
+                    </div>
+                  </div>
+                  <div class="client__thumb">
+                    <div class="client__logo">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><path d="M214.231 66.336c-1.122.165-2.2 4.298-4.369 6.453-1.585 1.551-3.565 1.458-4.616 3.378-.399.714-.271 1.941-.722 3.113-.888 2.354-4.002 2.563-4.002 5.125-.01 2.767 2.595 3.294 4.857 5.261 1.765 1.578 1.935 2.667 4.07 3.436 1.826.617 4.54-1.408 6.983-.679 2.003.595 3.923 1.025 4.378 3.085.399 1.902-.029 4.843-2.462 4.503-.819-.094-4.377-1.288-8.74-.823-5.273.6-11.285 2.318-11.873 8.196-.325 3.28 3.739 7.153 7.662 6.366 2.71-.53 1.429-3.731 2.901-5.283 1.938-1.993 12.911 6.947 23.106 6.947 4.294 0 7.488-1.086 10.659-4.407.296-.255.658-.797 1.115-.833.434.036 1.188.461 1.438.642 8.209 6.601 14.421 19.846 44.608 19.998 4.247.024 9.08 2.053 13.032 5.654 3.521 3.255 5.578 8.326 7.582 13.464 3.023 7.712 8.434 15.214 16.644 23.563.447.447 7.207 5.701 7.749 6.093.082.06.58 1.243.407 1.903-.199 5.01-.929 19.564 9.924 20.225 2.652.134 1.96-1.73 1.96-3.014-.007-2.535-.47-5.056.866-7.653 1.826-3.569-3.876-5.211-3.71-12.931.118-5.756-4.718-4.774-7.168-9.16-1.414-2.54-2.671-3.885-2.58-6.993.553-17.484-3.722-28.975-5.851-31.797-1.663-2.129-3.039-2.974-1.52-3.958 9.059-5.987 11.111-11.549 11.111-11.549 4.817-11.321 9.147-21.661 15.12-26.214 1.202-.942 4.288-3.245 6.18-4.147 5.574-2.627 8.506-4.222 10.127-5.796 2.559-2.493 4.586-7.7 2.129-10.854-3.055-3.895-8.333-.805-10.66.577-16.651 9.881-19.104 27.312-24.873 37.322-4.602 7.998-12.082 13.873-18.772 14.353-5.01.372-10.42-.643-15.8-3.006-13.09-5.738-20.249-13.147-21.945-14.457-3.515-2.714-30.813-29.516-52.935-30.61 0 0-2.746-5.5-3.437-5.586-1.616-.21-3.273 3.28-4.46 3.688-1.11.367-2.986-3.779-4.113-3.595M116.855 226.289c-2.083-.049-3.852-1.756-3.852-3.868l.009-69.001H90.268v76.057c0 3.731 3.021 6.771 6.727 6.771h39.745c3.731 0 6.716-3.039 6.716-6.771V153.42h-22.721l-.018 69.001c.001 2.112-1.769 3.819-3.862 3.868M192.99 153.42h-34.414c-4.078 0-7.395 3.313-7.395 7.428v75.398h22.765v-69.163a3.823 3.823 0 0 1 3.847-3.798c2.122 0 3.829 1.641 3.876 3.74v69.221h22.666v-69.221c.029-2.101 1.733-3.74 3.855-3.74 2.1 0 3.839 1.681 3.854 3.798v69.163h22.766v-75.398c0-4.113-3.328-7.428-7.398-7.428H192.99M75.1 215.435H52.127v20.813H29.398V153.42h45.846c4.104 0 7.31 3.335 7.31 7.46v47.088a7.45 7.45 0 0 1-7.454 7.467zm-15.26-48.207a3.89 3.89 0 0 0-3.851-3.94h-3.862v41.893h3.861c2.006 0 3.868-1.595 3.85-3.891v-34.062"/><path d="M272.967 236.246v-20.795h-7.728v20.795h-22.718v-75.398c0-4.113 3.315-7.428 7.395-7.428h38.376c4.086 0 7.397 3.313 7.397 7.428v75.398h-22.722zm0-31.053v-38.139c-.056-2.107-1.751-3.729-3.873-3.729-2.101 0-3.832 1.687-3.854 3.789v38.076l7.727.003"/></svg>
+                    </div>
+                  </div> 
+                  <div class="client__thumb">
+                    <div class="client__logo">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><path fill-rule="evenodd" clip-rule="evenodd" d="M56.246 149.036c-3.607 0-9.653-.165-9.653-.165v-26.534l11.027.093s12.19.398 12.19 13.348c0 12.963-9.965 13.258-13.564 13.258m4.208-30.422H26.003s2.431.855 3.843 4.099c.776 1.795.946 4.417.946 7.802v28.527s1.493 13.774-5.668 13.774h26.573s-3.479-.557-4.845-6.391c-.401-1.707-.209-3.823-.209-6.584v-7.045l14.749.189s23.136 1.092 23.136-16.906c0-16.059-13.483-17.465-24.074-17.465M108.354 148.674l.087-26.286h11.774s11.284.812 11.284 13.67c0 12.866-11.002 12.787-14.455 12.787-3.45 0-8.69-.171-8.69-.171m11.051 3.936s1.853.1 4.154.1c2.308 0 22.58 1.875 22.675-17.867.084-17.096-20.794-16.229-20.794-16.229H86.325c6.015 0 6.344 10.029 6.344 10.029v30.117c0 3.361.22 6.381-.284 8.327-1.511 5.894-5.102 5.729-5.102 5.729h27.383c-2.77.076-4.518-2.252-5.464-4.223-1.229-3.205-.849-9.834-.849-9.834v-5.494l27.993 19.551h21.791l-21.353-18.329c-13.126 2.352-17.379-1.877-17.379-1.877M180.985 152.538l8.292-16.076 9.472 16.076h-17.764zm5.781-20.614s-10.898 21.033-16.158 31.018c-4.67 8.882-8.239 9.194-9.165 9.898h14.275c-4.812-3.331-.159-10.15-.159-10.15l2.986-5.81h22.671l3.21 5.508c1.965 3.562 3.165 5.008 3.021 6.58-.264 2.961-3.591 4.032-3.591 4.032h30.264c-1.582-.15-4.237-2.563-5.693-3.656-5.198-3.9-8.099-10.41-8.099-10.41s-16.916-27.475-20.599-34.177c-3.697-6.706-3.702-6.136-3.702-6.136h-23.629s4.583 2.436 7.746 5.503c3.782 3.669 6.622 7.8 6.622 7.8M322.408 152.538l8.291-16.076 9.475 16.076h-17.766zm5.777-20.614s-10.891 21.033-16.154 31.018c-4.67 8.882-8.245 9.194-9.161 9.898h14.271c-4.813-3.331-.166-10.15-.166-10.15l2.988-5.81h22.673l3.216 5.508c1.971 3.562 3.163 5.008 3.02 6.58-.275 2.961-3.587 4.032-3.587 4.032h30.26c-1.581-.15-4.241-2.563-5.697-3.656-5.197-3.9-8.096-10.41-8.096-10.41s-16.92-27.475-20.608-34.177c-3.687-6.706-3.697-6.136-3.697-6.136H313.82s4.586 2.436 7.752 5.503c3.772 3.669 6.613 7.8 6.613 7.8M268.484 122.429c13.688 0 14.642 10.063 14.642 10.063s.459 4.688.459 21.621c0 6.741-2.447 10.719-6.131 13.251-5.292 2.727-15.115 1.411-15.115 1.411l.186-46.347c1.868-.149 4.412-.046 5.959.001m26.633 4.703c-9.332-8.896-24.108-8.519-24.108-8.519l-30.214-.131c5.195 1.693 5.471 8.553 5.471 8.553v33.007c0 3.214.095 5.407-.368 7.23-1.492 5.916-5.059 5.736-5.059 5.736h27.099s2.746.08 6.021-.101c9.82-.501 28.717-4.418 28.717-29.325 0-6.86-3.701-12.777-7.559-16.45"/></svg>
+                    </div>
+                  </div> 
+                  <div class="client__thumb">
+                    <div class="client__logo">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><path d="M345.318 189.959c-18.317.118-35.668.266-40.508-.164-9.785-.852-16.325-7.254-17.083-16.675-.513-6.183-.513-11.304-.027-16.179.888-9.174 8.561-17.907 17.11-18.329 3.065-.165 11.259-.146 26.104-.082l43.196.082v-17.917s-34.407-.036-44.752-.082c-13.884-.063-20.87-.073-25.298.082-9.74.375-17.898 3.842-24.236 10.281-6.01 6.082-9.595 15.758-10.124 25.554-.303 5.286-.402 12.19 0 16.298.996 10.536 4.407 18.805 10.124 24.594 6.108 6.219 15.411 10.162 24.246 10.279 7.254.094 70.04 0 70.04 0v-17.906c.001 0-19.067.071-28.792.164M150.317 121.656v17.898h42.621v67.836h17.99v-67.835h42.62v-17.899H150.317zM131.633 155.506c-.129-9.64-3.53-17.908-10.125-24.594-6.878-6.997-17.369-9.905-24.238-10.271-5.972-.338-29.504-.228-35.028 0-7.783.329-13.455 2.653-16.298 4.774-.027.02-.055.01-.055-.037V92.811h-18v114.89H45.86s-.356-47.027.045-52.15c.714-9.1 7.618-16.25 16.426-17.021 7.061-.603 28.253-.438 34.902.01 9.127.63 15.868 7.765 16.398 17.377.174 3.539-.008 51.783-.008 51.783h18.008c.002.001.049-48.059.002-52.194"/></svg>
+                    </div>
+                  </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- End Client Sextion -->
+
+  <!-- Start Footer Sextion -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row md-5 footer__content">
+          <div class="col-md footer__logo">
+            <div class="footer__logo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="56" height="25" viewBox="0 0 56 25"><g transform="translate(-160 -40)"><rect width="23" height="13" transform="translate(160 40)" fill="#ccb9a6"/><text transform="translate(160 60)" fill="#f6f5f0" font-size="20" font-family="SourceSansPro-Bold, Source Sans Pro" font-weight="700" letter-spacing="0em"><tspan x="0" y="0">Shade</tspan></text></g></svg>
+            </div>
+          </div>
+          <div class="col-md footer__help">
+              <h5>may we help</h5>
+              <ul>
+                <li>
+                  <a href="#">set meeting</a>
+                </li>
+                <li>
+                  <a href="#">Carrier</a>
+                </li>
+                <li>
+                  <a href="#">sign in</a>
+                </li>
+                <li>
+                  <a href="#">FAQ</a>
+                </li>
+              </ul>
+          </div>
+          <div class="col-md footer__about">
+            <h5>company</h5>
+            <ul>
+              <li>
+                <a href="#">our mission</a>
+              </li>
+              <li>
+                <a href="#">sitemap</a>
+              </li>
+              <li>
+                <a href="#">terms & conditions</a>
+              </li>
+              <li>
+                <a href="#">process and delivery</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md footer__info">
+            <div class="info">
+              <h5>New Yourk - USA</h5>
+              <p>127, Third Street Fifth Avenue,USA</p>
+              <p>Call Toll-Free: +1 (888) 507-0220</p>
+            </div>
+            <div class="footer__social">
+              <a target="_blank" href="#" class="footer__icon"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+              <a target="_blank" href="#" class="footer__icon"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+              <a target="_blank" href="#" class="footer__icon"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+              <a target="_blank" href="#" class="footer__icon"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <p class="footer__copywrite">Design and code by Ibrahim El-Awamry, 2019</p>
+      </div>
+    </footer>
+  <!-- End Footer Sextion -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slick.min.js"></script>
+  </body>
+</html>
+

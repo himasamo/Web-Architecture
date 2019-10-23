@@ -1,0 +1,142 @@
+//-------------------------------------
+   // :: Work Section
+//-------------------------------------
+.project{
+   max-width: 100%;
+   padding: 9.375rem 0em;
+   position: relative;
+
+   h2{
+    @include Subheading();
+   }  
+
+   @include element('unit'){
+      display: inline-block;
+      width: 100%;
+      margin: 0;
+      position: relative;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      perspective: 300;
+   }
+
+   @include element('overlay'){
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: fade-out(#111, 0.5);
+      width: 100%;
+      height: 100%;
+      transition: opacity 0.2s ease-in-out;
+      -webkit-transition: opacity 0.2s ease-in-out;
+      padding: 30px;
+      letter-spacing: 1px;
+      outline: none;
+      @include flex-box('col');
+   }
+
+   @include element('detail'){ 
+     padding: 2.1875rem;
+   }
+   
+   @include element('title'){     
+      @include font-size(1rem);
+      font-weight: 600;
+      color: #fff; 
+      text-transform: uppercase;
+      margin-bottom:   0.25rem;
+   }
+   
+   @include element('topic'){
+      @include font-size(0.875rem);
+      font-weight: 400;
+      text-transform: capitalize;
+      letter-spacing: 1.25;
+      display: inline-block;
+      margin-bottom: 0rem;
+
+      .dash{
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        width: 20px;
+        height: 2px;
+        background: #fff;
+        margin: 0 10px; 
+      }
+   }
+
+   @include element('text'){
+      @include font-size(1em);
+      @include source('all');
+      @include width('75');
+      font-weight: 400;
+      margin-top: 1.25em;
+   }
+
+
+   @include element('thumbnail'){
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;  
+      padding-top: 100%;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      img{
+         width: 100%;  
+         height: auto;
+         vertical-align: middle;
+         position: absolute; 
+         left: 0; 
+         top: 0;
+      }
+   }
+   .btn-cta{
+     width: 100%;
+     text-align: center;
+     margin-top: 3.125rem;
+     .cta{
+       margin: 0px auto;
+     }
+   }
+   
+   @include motions();
+}
+
+//-------------------------------------
+   // :: Work Mobile
+//-------------------------------------
+@media only screen and (min-width: 320px) and (max-width: 992px) and (orientation: Portrait){
+   .project{
+     @include element('unit'){
+       position: relative;
+       @include margin('m-50-b');
+       @include modifier('first'){
+       }
+       @include modifier('last'){
+         margin-bottom: 0em;
+       }
+     }
+   }
+ }
+ 
+@media only screen and (min-width: 320px) and (max-width: 992px) and (orientation: landscape){
+   .project{
+     @include element('unit'){
+       position: relative;
+       @include margin('m-50-b');
+       @include modifier('first'){
+         margin-top: 0px;
+       }
+       @include modifier('last'){
+         margin-top: 0px;
+         margin-bottom: 0em;
+       }
+     }
+   }
+ }

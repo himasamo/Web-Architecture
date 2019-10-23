@@ -1,0 +1,51 @@
+// //-------------------------------------
+//    // Forms
+// //-------------------------------------
+// input[type="text"], input[type="email"], textarea{
+//   @include font-size(1em);
+//   @include source('all');
+//   display: block;
+//   font-weight: 400;
+//   line-height: 1.5;
+//   width: 100%;
+//   height: 50px;
+//   padding: 1.25em;
+//   color: $lighter-gray;
+//   background: none;
+//   outline: none;
+//   border: 1px solid $lighter-gray;
+//   transition: all .2s ease-in;
+//   background-clip: padding-box;
+//   border-radius: 0.25rem;
+
+
+//   &:nth-child(3){
+//     margin: 0px;
+//   }
+//   &:hover::-webkit-input-placeholder{
+//     color: $dark-gray;
+//   }
+//   &:hover::-moz-placeholde{
+//     color: $dark-gray;
+//   }
+//   &:hover::-ms-input-placeholder{
+//     color: $dark-gray;
+//   }
+//   &:hover::-moz-placeholder{
+//     color: $dark-gray;
+//   }
+//   &:hover,
+//   &:focus{
+//     border-color: $dark-gray;
+//   }
+// }
+
+// textarea{
+//   padding: 20px;
+//   height: 120px;
+//   height: auto;
+//   line-height: inherit;
+//   margin: 0;
+//   overflow: auto;
+//   resize: vertical;
+// }

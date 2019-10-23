@@ -1,0 +1,130 @@
+//-------------------------------------
+   // :: Service Section
+//-------------------------------------
+.service{
+  padding: 9.375rem 0em;
+  background: $secondary;
+  position: relative;
+ 
+  h2{
+    @include Subheading();
+  }  
+
+  h5{
+    @include font-size(1rem);
+    font-weight: 600;
+    color: $f-color;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  @include element('unit'){
+    position: relative;
+    @include modifier('first'){
+        margin-top: 40px;
+    }
+    @include modifier('last'){
+        margin-top: 80px;
+    }
+  }
+  
+  @include element('thumb'){
+    position: relative;
+    &:hover{
+      z-index: 1;
+      .overlay{
+        z-index: 1;
+        opacity: 0;
+      }
+      img{
+        @include transition();
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  @include element('thumbnail'){
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;  
+    padding-top: 120%;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    img{
+      width: 100%;  
+      height: auto;
+      vertical-align: middle;
+      position: absolute; 
+      left: 0; 
+      top: 0;
+    }
+  }
+
+  @include element('overlay'){
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: fade-out(#3B3B38, 0.5);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    cursor: pointer;
+  }
+
+  .animate{
+    opacity: 0;
+  }
+
+  @keyframes anim1 {
+    from{
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+
+//-------------------------------------
+   // :: service Mobile
+//-------------------------------------
+@media only screen and (min-width: 320px) and (max-width: 992px) and (orientation: Portrait){
+  .service{
+    @include element('unit'){
+      position: relative;
+      @include margin('m-50-b');
+      @include modifier('first'){
+        margin-top: 0px;
+      }
+      @include modifier('last'){
+        margin-top: 0px;
+        margin-bottom: 0em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 992px) and (orientation: landscape){
+  .service{
+    @include element('unit'){
+      position: relative;
+      @include margin('m-50-b');
+      @include modifier('first'){
+        margin-top: 0px;
+      }
+      @include modifier('last'){
+        margin-top: 0px;
+        margin-bottom: 0em;
+      }
+    }
+  }
+}

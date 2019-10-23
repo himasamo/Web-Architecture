@@ -1,0 +1,48 @@
+//-------------------------------------
+  // :: Button and CTA Link
+//-------------------------------------
+.btn,
+.button,
+input[type="button"],
+input[type="submit"],
+a[class*="cta"],
+button[type="button"]{
+  display: inline-block;
+  padding: 0.75rem 1.125rem;
+  @include font-size(0.75rem);
+  @include text-transform('uppercase');
+  @include source('all');
+  line-height: 1.5;
+  background: $accent;
+  color: $primary;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin: 0px auto;
+  -webkit-tap-highlight-color: transparent;
+  background-image: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 0.2s ease-in-out;
+
+  &::-moz-focus-inner{
+    border: 0;
+  }
+  &:hover{
+    background-color: #A6907B;
+  }
+  &:active{
+    background-color: #8B7055;
+  }
+  &:focus{
+    background-color: #8B7055;
+    outline: 0;
+  }
+
+}

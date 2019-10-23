@@ -1,0 +1,78 @@
+//-------------------------------------
+   // :: Preloading Screen
+//-------------------------------------
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    background-color: $primary;
+    @include flex-box('center');
+    overflow: hidden;   
+
+    @include element('loader'){
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        vertical-align: text-bottom;
+        background-color: currentColor;
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner-grow .75s linear infinite;
+        animation: spinner-grow .75s linear infinite;
+    }
+
+    @-webkit-keyframes spinner-grow {
+    0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes spinner-grow {
+    0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+}
+
+// @-webkit-keyframes spinner-grow {
+//     0% {
+//       -webkit-transform: scale(0);
+//       transform: scale(0);
+//     }
+//     50% {
+//       opacity: 1;
+//     }
+//   }
+  
+//   @keyframes spinner-grow {
+//     0% {
+//       -webkit-transform: scale(0);
+//       transform: scale(0);
+//     }
+//     50% {
+//       opacity: 1;
+//     }
+//   }
+  
+//   .spinner-grow {
+//     display: inline-block;
+//     width: 2rem;
+//     height: 2rem;
+//     vertical-align: text-bottom;
+//     background-color: currentColor;
+//     border-radius: 50%;
+//     opacity: 0;
+//     -webkit-animation: spinner-grow .75s linear infinite;
+//     animation: spinner-grow .75s linear infinite;
+//   }

@@ -1,0 +1,358 @@
+//-------------------------------------
+  // :: Mixin BEM
+//-------------------------------------
+@mixin element($element){
+  &__#{$element}{
+    @content;
+  }
+}
+
+@mixin modifier($modifier){
+  &--#{$modifier}{
+    @content;
+  }
+}
+
+//-------------------------------------
+  // :: Font
+//-------------------------------------
+@mixin source($all){
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+//-------------------------------------
+  // :: Width
+//-------------------------------------
+@mixin width($width: all){
+  @if $width == '40'{
+    width: 40%;
+  }
+  @else if $width == '50'{
+    width: 50%;
+  }
+  @else if $width == '75'{
+    width: 75%;
+  }
+  @else if $width == '100'{
+    width: 100%;
+  }
+}
+
+//-------------------------------------
+  // :: Mixin Flexbox
+//-------------------------------------
+@mixin flex-box($flex: all){
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+
+  @if $flex == "vertical"{
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+  }
+  @if $flex == "flex-end"{
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+  }
+  @if $flex == "around"{
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    align-items: center;
+    -webkit-align-items: center;
+  }
+  @else if $flex == "center"{
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+  }
+  @else if $flex == "left"{
+    align-items: center;
+    -webkit-align-items: center;
+  }
+  @else if $flex == "row"{
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+  }
+  @else if $flex == "col"{
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+  }
+  @else if $flex == "dir-col"{
+    flex-direction: column;
+    -webkit-flex-direction: column;
+  }
+  @else if $flex == "bottom-left"{
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+  }
+  @else if $flex == "wrap-row"{
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+//-------------------------------------
+  // :: Unorder List
+//-------------------------------------
+@mixin unorder-list($all){
+  list-style-type: none;
+}
+
+@mixin list-item($all){
+  display: inline-block;
+  margin-right: 15px;
+  @include modifier('last'){
+    margin-right: 0px
+  }
+}
+
+@mixin list-link($all){
+  font-size: 18px !important;
+  transition: color 0.3s ease-in-out;
+  &:hover{
+    @include color-themes('color');
+  }
+}
+
+//-------------------------------------
+  // :: Negative Spacing
+//-------------------------------------
+@mixin padding($p: all){
+  @if $p == "p-16-l-r"{
+    padding: 0 1em;
+  }
+  @else if $p == "p-30-l-r"{
+    padding: 0 1.875rem;
+  }
+  @else if $p == "sm"{
+    padding: 1.25em 1.875rem;
+  }
+  @else if $p == "p-100-tb-lr"{
+    padding: 6.25em 1.25rem;
+  }
+  @else if $p == "p-100-t-b"{
+    padding: 6.25rem 0;
+  }
+  @else if $p == "p-100-t"{
+    padding-top: 6.25rem;
+  }
+  @else if $p == "p-100-b"{
+    padding-bottom: 6.25rem;
+  }
+  @else if $p == "p-mq"{
+    padding: 6.25em 1rem;
+  }
+}
+
+@mixin margin($m: all){
+  @if $m == "m-20-b"{
+    margin-bottom: 1.25rem;        
+  }
+  @else if $m == "m-20-t"{
+    margin-top: 1.25rem;        
+  }
+  @else if $m == "m-20-l"{
+    margin-left: 1.25rem;        
+  }
+  @else if $m == "m-15-r"{
+    margin-right: 0.9375rem;        
+  }
+  @else if $m == "m-10-b"{
+    margin-bottom: 0.4375rem;       
+  }
+  @else if $m == "m-10-t-b"{
+    margin: 0.4375rem 0rem;       
+  }
+  @else if $m == "m-20-t-b"{
+    margin: 1.25em 0;        
+  }
+  @else if $m == "m-30-b"{
+    margin-bottom: 1.875rem;        
+  }
+  @else if $m == "m-30-t"{
+    margin-top: 1.875rem;        
+  }
+  @else if $m == "m-40-t"{
+    margin-top: 2.5em;        
+  }
+  @else if $m == "m-40-b"{
+    margin-top: 2.5em;        
+  }
+  @else if $m == "m-40-t-b"{
+    margin: 2.5em 0;        
+  }
+  @else if $m == "m-50-t"{
+    margin-top: 3.125em;        
+  }
+  @else if $m == "m-50-l"{
+    margin-left: 3.125em;        
+  }
+  @else if $m == "m-50-b"{
+    margin-bottom: 3.125em;        
+  }
+  @else if $m == "m-80-t-b"{
+    margin: 5rem 0;        
+  }
+  @else if $m == "m-80-t"{
+    margin-top: 5rem;        
+  }
+  @else if $m == "m-100"{
+    margin: 6.25em 0;        
+  }
+  @else if $m == "m-100-t"{
+    margin-top: 6.25em;        
+  }
+  @else if $m == "m-100-b"{
+    margin-bottom: 6.25em;        
+  }
+  @else if $m == "m-100-l"{
+    margin-left: 6.25em;        
+  }
+}
+
+//-------------------------------------
+  // :: Clearfix
+//-------------------------------------
+@mixin clearfix() {
+  & {
+    *zoom: 1;
+  }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+//-------------------------------------
+  // :: Heading
+//-------------------------------------
+@mixin text-transform($text: all){  
+  @if $text == "capitalize"{
+    text-transform: capitalize;        
+  }
+  @else if $text == "uppercase"{
+    text-transform: uppercase;        
+  }
+}
+
+
+//-------------------------------------
+  // :: Social Media Icon
+//-------------------------------------
+@mixin social-icn(){
+  @include font-size(0.875rem);
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid $accent;
+  border-radius: 36px;
+  color: $accent !important;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  @include transition();
+  &:last-child {
+    margin-right: 0px;
+  }
+  &:hover {
+    color: $f-color !important;
+    border: 1px solid $f-color;
+  }
+}
+
+@mixin social-icn-n(){
+  @include font-size(0.875rem);
+  display: inline-block;
+  text-align: center;
+  color: $accent;
+  margin-right: 15px;
+  @include transition();
+  &:last-child {
+    margin-right: 0px;
+  }
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+//-------------------------------------
+  // :: Transition
+//-------------------------------------
+@mixin transition($args: all 0.4s ease 0s) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-o-transition: $args;
+	transition: $args;
+}
+
+//-------------------------------------
+  // :: Typo
+//-------------------------------------
+@mixin p() {
+	@include font-size(0.875rem);
+  font-weight: 400;
+  color: $f-color;
+  margin-bottom: 0rem;
+}
+
+@mixin Subheading() {
+  font-weight: 600;
+  color: $accent;
+  text-transform: uppercase;
+  margin-bottom: 3.125rem;
+  letter-spacing: 0.25;
+}
+
+//-------------------------------------
+  // :: SVG
+//-------------------------------------
+@mixin arrow(){
+	display: block;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  svg{
+    fill: #ffffff;
+  }
+}
+
+//-------------------------------------
+  // :: animation
+//-------------------------------------
+@mixin motions(){
+	.motions {
+    opacity: 0;
+  }
+
+  @keyframes motion {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+}

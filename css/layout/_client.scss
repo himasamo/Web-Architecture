@@ -1,0 +1,36 @@
+//-------------------------------------
+   // :: Client Section
+//-------------------------------------
+.client{
+  padding: 9.375rem 0em;
+
+  h2{
+    @include Subheading();
+  }  
+
+  @include element('slide'){
+  width: 100%;
+  outline: none;
+  @include flex-box('vertical');
+  }
+
+  @include element('thumb'){
+    outline: none;
+    margin-left: 10px;
+    &:first-child{
+      margin-left: 0px;;
+    }
+  }
+
+  @include element('logo'){
+    height: 145px;
+    background: $secondary;
+    @include flex-box('center');
+    svg{
+      width: 8em;
+      height: auto;
+      fill: $f-color;
+      @include responsive-font-size(8);    
+    }
+  }
+}

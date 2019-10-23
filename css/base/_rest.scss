@@ -1,0 +1,169 @@
+@import "../vendors/rfs";
+@import "../mixins/mixins";
+@import "../mixins/variables";
+
+//-------------------------------------
+   // :: HTML
+//-------------------------------------
+*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+*, *::after, *::before{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+//-------------------------------------
+   // :: Setting Blocks
+//-------------------------------------
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+   display: block;
+ }
+
+//-------------------------------------
+   // :: BODY
+//-------------------------------------
+body{
+  @include responsive-font-size(1rem);
+  background-color: $primary;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 'Source Sans Pro', "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: $accent;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: #FFF498;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+
+//-------------------------------------
+   // :: Heading Style
+//-------------------------------------
+h1, h2, h3, h4, h5, h6 {
+  @include source('all');
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  line-height: 1.2
+}
+
+h1 {
+  @include font-size(2.5rem);
+}
+
+h2 {
+  @include font-size(2rem);
+}
+
+h3 {
+  @include font-size(1.75rem);
+}
+
+h4 {
+  @include font-size(1.5rem);
+}
+
+h5 {
+  @include font-size(1.25rem);
+}
+
+h6 {
+  @include font-size(1rem);
+}
+
+// -------------------------------------
+  // :: Basic Text Style
+// -------------------------------------
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+      margin: 0;
+      padding: 0;
+  }
+}
+
+em{
+  font-style: italic;
+}
+
+p{
+  @include font-size(1.125rem);
+  @include source('all');
+  margin: 0 0 1.5em 0;
+  line-height: 1.75;
+  font-weight: 400;
+  color: $f-color;
+}
+
+b, strong{
+  font-weight: bold;
+}
+
+hr{
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 10px 0 30px;
+  height: 0;
+  overflow: visible;
+}
+
+a{
+  color: #0074D9;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  outline: 0;
+  &:hover,
+  &:focus{
+    color: lighten(#0074D9, 20%);
+  }
+}
+
+//-------------------------------------
+  // :: Selection
+//-------------------------------------
+::selection{
+  background: #A6907B;
+}
+
+::-moz-selection{
+  background: #A6907B;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+  page-break-inside: avoid;
+}
+
+img::selection{
+  background: transparent;
+}
+
+img::-moz-selection{
+  background: transparent;
+}
+
+svg {
+   overflow: hidden;
+   vertical-align: middle;
+ }
